@@ -4,7 +4,7 @@ var password = "";
 var upperCaseAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var upperCaseDelta = [""];
 var numChars = [""];
-var specialChars [""];
+var specialChars = [""];
 
 
 function generatePassword() {
