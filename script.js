@@ -9,7 +9,7 @@ var numChars = ["0","1","2","3","4","5","6","7","8","9"];
 var specialChars = ["~","!","#","$","%","^","&","*","(",")","+","-",";","@","_"];
 var selection = [];
 
-// Function that collects user input and concatenates the values. 
+// Function that collects user input and concatenates the values. If no options are selected we alert the user and ask them to start again. 
 
 function generatePassword() {
   
@@ -40,6 +40,11 @@ function generatePassword() {
     if (specialChar === true) {
       selection = selection.concat(specialChars)
     }
+
+    if (upperCase === false && lowerCase === false && numChar === false && specialChar === false) {
+      alert("You must select at least one character type. Please start over.")
+      return;
+    }
  
 
   // "Variable to create a bucket of all concatenated password values."  
@@ -55,8 +60,9 @@ function generatePassword() {
     basket = basket + randomCharacter
 
   }  
+
   // Console logs ensure all variables being logged/conatenated properly correctly. 
-  
+
   console.log(basket)
   console.log(selection)
   console.log(passLength)
@@ -75,16 +81,11 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-
   
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
 
 // console logs showing all values passing
 
