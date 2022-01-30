@@ -13,7 +13,6 @@ var selection = [];
 
 function generatePassword() {
   
-
   var passLength = prompt("Please enter a number of characters between 8 & 128.");
 
     if  (passLength < 8 || passLength > 128) {
@@ -66,10 +65,10 @@ function generatePassword() {
   console.log(basket)
   console.log(selection)
   console.log(passLength)
-  console.log(passLength+upperCase)
-  console.log(passLength+upperCase+lowerCase)
-  console.log(passLength+upperCase+lowerCase+numChars)
-  console.log(passLength+upperCase+lowerCase+numChars+specialChars)
+  console.log(passLength+upperCaseAlpha)
+  console.log(passLength+upperCaseAlpha+lowerCaseAlpha)
+  console.log(passLength+upperCaseAlpha+lowerCaseAlpha+numChars)
+  console.log(passLength+upperCaseAlpha+lowerCaseAlpha+numChars+specialChars)
 
   return basket;
 
